@@ -8,7 +8,7 @@ Russell Harkanson: [@djcrazyarmz][twitter]
 
 ## License
 
-Licensed under [Apache 2.0 License][apache]. Enjoy.
+Licensed under [Apache 2.0 License][apache].
 
 [twitter]: http://twitter.com/djcrazyarmz
 [apache]: http://www.apache.org/licenses/LICENSE-2.0
