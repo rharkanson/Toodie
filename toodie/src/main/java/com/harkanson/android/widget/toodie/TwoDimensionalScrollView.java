@@ -505,14 +505,6 @@ public class TwoDimensionalScrollView extends FrameLayout {
             return true;
         }
 
-        //TODO possibly get rid of this
-        /*
-        if(!canScroll()) {
-            mIsBeingDragged = false;
-            return false;
-        }
-        */
-
         switch (action & MotionEvent.ACTION_MASK) {
             case MotionEvent.ACTION_MOVE: {
 
@@ -620,7 +612,6 @@ public class TwoDimensionalScrollView extends FrameLayout {
                     final boolean canOverscroll = overscrollMode == OVER_SCROLL_ALWAYS
                             || (overscrollMode == OVER_SCROLL_IF_CONTENT_SCROLLS && (rangeX > 0 || rangeY > 0));
 
-                    //TODO possibly break this into two statements
                     if (overScrollBy(deltaX, deltaY, getScrollX(), getScrollY(), rangeX, rangeY, mOverscrollDistance, mOverscrollDistance, true)) {
                         mVelocityTracker.clear();
                     }
@@ -1605,8 +1596,6 @@ public class TwoDimensionalScrollView extends FrameLayout {
             final boolean movingRight = velocityX > 0;
             final boolean movingDown = velocityY > 0;
 
-
-            //TODO Finish this
             View currentFocused = findFocus();
             View newFocused = findFocusableViewInMyBounds(movingRight, mScroller.getFinalX(), movingDown, mScroller.getFinalY(), currentFocused);
 
@@ -1752,7 +1741,6 @@ public class TwoDimensionalScrollView extends FrameLayout {
     }
 
     protected float getHorizontalScrollFactor() {
-        // TODO: Should use something else.
         return getVerticalScrollFactor();
     }
 
